@@ -14,7 +14,11 @@ export const Project = () => {
     "FastAPI, ReactJS, MySQL, SQLAlchemy, LangGraph, Tailwind CSS, Groq API, Meta's LLaMA 3 for AI",
     "On Going Project",
   ];
-  const projectLinks = ["#", "#", "#"];
+  const projectLinks = [
+    "https://mindmitra-frontend.vercel.app", // ✅ Active link
+    "#",
+    "#",
+  ];
 
   return (
     <section
@@ -55,27 +59,32 @@ export const Project = () => {
                 ))}
               </ul>
 
-              {/* Tooltip Wrapper */}
+              {/* Button / Tooltip */}
               <div className="group relative mt-4">
                 <a
                   href={projectLinks[index]}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800
-                  transition-all cursor-not-allowed"
-                  onClick={(e) => e.preventDefault()}
+                  className={`inline-block px-6 py-2 rounded-lg transition-all ${
+                    index === 0
+                      ? "bg-blue-600 text-white hover:bg-blue-700" // ✅ Active MindMitra link
+                      : "bg-black text-white hover:bg-gray-800 cursor-not-allowed"
+                  }`}
+                  onClick={(e) => {
+                    if (index !== 0) e.preventDefault();
+                  }}
                 >
-                  View Project
-                  <br />
-                  <span className="md:hidden" >(⚠️Will deploy soon)</span>
+                  View Live
                 </a>
-                <span
-                  className="absolute left-1/2 top-12 -translate-x-1/2 whitespace-nowrap
-                  bg-gray-900 text-white text-xs rounded px-2 py-1 opacity-0
-                  group-hover:opacity-100 transition-opacity pointer-events-none"
-                >
-                  Currently not available, will update soon.
-                </span>
+                {index !== 0 && (
+                  <span
+                    className="absolute left-1/2 top-12 -translate-x-1/2 whitespace-nowrap
+                    bg-gray-900 text-white text-xs rounded px-2 py-1 opacity-0
+                    group-hover:opacity-100 transition-opacity pointer-events-none"
+                  >
+                    Currently not available, will update soon.
+                  </span>
+                )}
               </div>
             </div>
           ))}

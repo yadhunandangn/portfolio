@@ -24,26 +24,26 @@ export const About = () => {
           {/* Image */}
           <img
             src={Yadhu}
-             alt="Yadhunandan GN"
+            alt="Yadhunandan GN"
             className="w-40 h-40 md:w-64 md:h-64 rounded-full object-cover border-4 border-gray-300 shadow-md"
           />
 
           {/* Text */}
           <p className="text-lg md:text-xl text-gray-700 text-center md:text-left leading-relaxed">
-            I am a Final Year Student at Dayananda Sagar College of Engineering,
-            pursuing a Master of Computer Applications (MCA).
+            I am an MCA Graduate from Dayananda Sagar College of Engineering,
+            Bengaluru.
             <br />
             Full stack development, Machine Learning, Chatbots, and AI are my
-            domains of interest. I am a passionate learner with good
+            domains of interest. I am a passionate learner with strong
             problem-solving abilities.
             <br />I am looking for opportunities to work on real-world projects
             that challenge my skills and allow me to contribute to innovative
             solutions.
             <br />
             <br />
-            <b>Full Name:</b>Yadhunandan GN <br />
-            <b>DOB:</b>06/03/2002 <br />
-            <b>Native:</b>Tumkur, Karnataka, India{" "}
+            <b>Full Name:</b> Yadhunandan GN <br />
+            <b>DOB:</b> 06/03/2002 <br />
+            <b>Native:</b> Tumkur, Karnataka, India
             <br />
           </p>
         </div>
@@ -88,7 +88,6 @@ export const About = () => {
           </a>
         </div>
       </div>
-
     </section>
   );
 };
